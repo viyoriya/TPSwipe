@@ -34,5 +34,8 @@ clean:
 install: $(TARGET)
 	sudo install -m 755 $(TARGET) $(INSTALL_PATH)/$(TARGET)
 
-.PHONY: all clean install
+uninstall:
+	sudo rm -f $(INSTALL_PATH)/$(TARGET)
+
+.PHONY: all clean install uninstall
 
